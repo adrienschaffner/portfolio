@@ -1,0 +1,440 @@
+<title>Adrien Schaffner</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  :root {
+    --bg: #f3f2ee;
+    --bg-raised: #ebe9e3;
+    --ink: #1c201b;
+    --ink-soft: #4b5148;
+    --ink-faint: #7c8277;
+    --rule: #d8d5cc;
+    --accent: #3f6b52;
+    --accent-ink: #f3f2ee;
+    --accent-wash: #e2e8e0;
+    --gold: #a9812f;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14180f;
+      --bg-raised: #1b2016;
+      --ink: #ece9e0;
+      --ink-soft: #b7bbaf;
+      --ink-faint: #7d8577;
+      --rule: #2c3226;
+      --accent: #82ac8e;
+      --accent-ink: #10160f;
+      --accent-wash: #202b1f;
+      --gold: #cfa958;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #14180f;
+    --bg-raised: #1b2016;
+    --ink: #ece9e0;
+    --ink-soft: #b7bbaf;
+    --ink-faint: #7d8577;
+    --rule: #2c3226;
+    --accent: #82ac8e;
+    --accent-ink: #10160f;
+    --accent-wash: #202b1f;
+    --gold: #cfa958;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--accent-wash); color: var(--ink); }
+
+  a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 6rem;
+  }
+
+  @media (max-width: 560px) {
+    .page { padding: 3.25rem 1.25rem 4rem; }
+  }
+
+  /* ---------- Header ---------- */
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  h1.name {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.4rem, 6vw, 3.4rem);
+    line-height: 1.05;
+    margin: 0;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .role {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 42ch;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.2rem;
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+  }
+
+  .meta-row span { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+  .links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .link-btn {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.82rem;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    color: var(--ink);
+    text-decoration: none;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+
+  .link-btn:hover { border-color: var(--accent); background: var(--accent-wash); text-decoration: none; }
+
+  .link-btn.primary {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-color: var(--accent);
+  }
+
+  .link-btn.primary:hover { opacity: 0.9; background: var(--accent); }
+
+  /* ---------- Section scaffolding ---------- */
+
+  section { margin-bottom: 3.4rem; }
+  section:last-of-type { margin-bottom: 0; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 1.4rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.6rem;
+  }
+
+  .section-head h2 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+
+  .section-head .count {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+  }
+
+  /* ---------- About ---------- */
+
+  .about p {
+    max-width: 62ch;
+    color: var(--ink-soft);
+    font-size: 1.02rem;
+  }
+
+  .about .tip {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    border-left: 2px solid var(--accent);
+    padding-left: 0.9rem;
+    margin-top: 1.1rem;
+  }
+
+  /* ---------- Skills ---------- */
+
+  .skills { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+
+  .skill {
+    font-size: 0.86rem;
+    padding: 0.4rem 0.8rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Experience (ledger rows) ---------- */
+
+  .ledger { display: flex; flex-direction: column; }
+
+  .row {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 0.4rem 1.5rem;
+    padding: 1.35rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .row:first-child { padding-top: 0; }
+  .row:last-child { border-bottom: none; padding-bottom: 0; }
+
+  @media (max-width: 560px) {
+    .row { grid-template-columns: 1fr; gap: 0.3rem; }
+  }
+
+  .row .period {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+    padding-top: 0.2rem;
+  }
+
+  .row .role-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+
+  .row .org {
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 0.92rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .row p.desc {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    max-width: 56ch;
+    margin: 0.3rem 0 0.6rem;
+  }
+
+  .row .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+  }
+
+  .row .tags span {
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+  }
+
+  .row .tags span:not(:last-child)::after { content: "·"; margin-left: 0.4rem; color: var(--rule); }
+
+  /* ---------- Education / languages two-col ---------- */
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  @media (max-width: 560px) {
+    .split { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+
+  .edu-item { margin-bottom: 1.4rem; }
+  .edu-item:last-child { margin-bottom: 0; }
+
+  .edu-item .school { font-weight: 600; font-size: 0.98rem; }
+  .edu-item .degree { color: var(--ink-soft); font-size: 0.9rem; }
+  .edu-item .period {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+    margin-top: 0.15rem;
+  }
+
+  .lang-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.95rem;
+  }
+  .lang-item:last-child { border-bottom: none; }
+  .lang-item .level { color: var(--ink-faint); font-size: 0.85rem; }
+
+  /* ---------- Footer ---------- */
+
+  footer {
+    margin-top: 4.5rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .row, .hero, section { animation: rise 0.5s ease both; }
+    section:nth-of-type(1) { animation-delay: 0.02s; }
+    section:nth-of-type(2) { animation-delay: 0.06s; }
+    section:nth-of-type(3) { animation-delay: 0.1s; }
+    section:nth-of-type(4) { animation-delay: 0.14s; }
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .row, .hero, section { animation: none; }
+  }
+</style>
+
+<div class="page">
+
+  <header class="hero">
+    <div class="eyebrow">Portfolio — Product Owner</div>
+    <h1 class="name">Adrien Schaffner</h1>
+    <p class="role">Product Owner sur Keeper, l'outil de révision comptable en temps réel de TechWise. Ancien spécialiste RH &amp; droit social, aujourd'hui côté produit.</p>
+    <div class="meta-row">
+      <span>Cologne, Germany</span>
+      <span>Français · Anglais professionnel</span>
+    </div>
+    <div class="links">
+      <a class="link-btn primary" href="https://www.linkedin.com/in/adrien-schaffner/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="link-btn" href="mailto:adrien.schaffner@gmail.com">Écrire un e-mail</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="section-head"><h2>À propos</h2></div>
+    <p>Ma mission : faire d'un outil de révision de qualité comptable un bijou indispensable pour ses utilisateurs. Je pilote le backlog produit de Keeper, de la découverte du besoin jusqu'à la mesure du succès en production — parcours utilisateur, gestion des anomalies, intégrations.</p>
+    <p>Avant le produit, cinq ans côté RH et recrutement, avec un passage par le droit social. Ce socle m'aide aujourd'hui à comprendre vite les irritants métier des utilisateurs et à arbitrer un backlog avec eux plutôt que pour eux.</p>
+    <p class="tip">tip — crédit − débit = balance 🧮</p>
+  </section>
+
+  <section class="skills-section">
+    <div class="section-head"><h2>Compétences</h2></div>
+    <div class="skills">
+      <span class="skill">Gestion du backlog</span>
+      <span class="skill">Gestion de projet agile</span>
+      <span class="skill">Scrum</span>
+      <span class="skill">Notion</span>
+      <span class="skill">Figma</span>
+      <span class="skill">Product Board</span>
+      <span class="skill">QA produit</span>
+      <span class="skill">Travail d'équipe</span>
+      <span class="skill">Recrutement</span>
+      <span class="skill">Droit social</span>
+    </div>
+  </section>
+
+  <section class="experience">
+    <div class="section-head">
+      <h2>Expérience</h2>
+      <span class="count">3 postes</span>
+    </div>
+    <div class="ledger">
+
+      <div class="row">
+        <div class="period">Juin 2023 —<br>Mars 2026</div>
+        <div>
+          <div class="role-title">Product Owner</div>
+          <div class="org">TechWise SAS</div>
+          <p class="desc">Responsable de la partie transverse de Keeper (parcours utilisateur, gestion des anomalies, documents, intégrations). Backlog partagé avec trois autres produits : priorisation, cycles, sprints, tickets jusqu'au déploiement.</p>
+          <div class="tags"><span>Notion</span><span>Figma</span><span>Insomnia</span><span>Product Board</span></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="period">Oct 2019 —<br>Juin 2021</div>
+        <div>
+          <div class="role-title">Account Developer</div>
+          <div class="org">QAPA</div>
+          <p class="desc">Développement d'un portefeuille de clients grands comptes (Carrefour, Danone, Mondial Relay) jusqu'à 57 clients actifs. Management de deux à quatre chargés de recrutement.</p>
+          <div class="tags"><span>Développement commercial</span><span>Management</span></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="period">Mars 2017 —<br>Mai 2019</div>
+        <div>
+          <div class="role-title">Chargé de recrutement</div>
+          <div class="org">Kelly Services France</div>
+          <p class="desc">Recrutement spécialisé sur les métiers techniques de l'industrie et de l'énergie : sourcing, entretiens, comptes rendus, suivi d'intégration et relation client.</p>
+          <div class="tags"><span>Sourcing</span><span>Entretiens</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="education">
+    <div class="section-head"><h2>Formation &amp; langues</h2></div>
+    <div class="split">
+      <div>
+        <div class="edu-item">
+          <div class="school">Le Wagon — Bordeaux</div>
+          <div class="degree">Full Stack Web Developer, Computer Science</div>
+          <div class="period">Avr 2022 – Juin 2022 · Batch #853</div>
+        </div>
+        <div class="edu-item">
+          <div class="school">INSEEC MSc</div>
+          <div class="degree">Master 2, Gestion des ressources humaines</div>
+          <div class="period">Mars 2017 – Sept 2018</div>
+        </div>
+      </div>
+      <div>
+        <div class="lang-item"><span>Français</span><span class="level">Langue natale</span></div>
+        <div class="lang-item"><span>Anglais</span><span class="level">Professionnel</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Adrien Schaffner · Cologne</span>
+    <span>Mis à jour août 2026</span>
+  </footer>
+
+</div>
