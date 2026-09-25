@@ -286,9 +286,9 @@
   .row li::marker { color: var(--accent); }
   .row li strong { color: var(--ink); font-weight: 600; }
 
-  .row .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
-  .row .tags span { font-size: 0.76rem; color: var(--ink-faint); font-family: "IBM Plex Mono", ui-monospace, monospace; }
-  .row .tags span:not(:last-child)::after { content: "·"; margin-left: 0.4rem; color: var(--rule); }
+  .row .tags, .project .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+  .row .tags span, .project .tags span { font-size: 0.76rem; color: var(--ink-faint); font-family: "IBM Plex Mono", ui-monospace, monospace; }
+  .row .tags span:not(:last-child)::after, .project .tags span:not(:last-child)::after { content: "·"; margin-left: 0.4rem; color: var(--rule); }
 
   /* Formation / langues */
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
@@ -377,17 +377,21 @@
     <p class="en">Passionate about user problems, with a real taste for UI/UX, I'm always looking for innovative and relevant solutions. At TechWise, I ran the Keeper backlog, from discovering the need to measuring success in production.</p>
     <p class="fr">Avant le produit, plusieurs années côté RH et recrutement, avec un passage par le droit social. Ce socle m'aide à comprendre vite les irritants métier et à arbitrer un backlog avec les utilisateurs plutôt que pour eux.</p>
     <p class="en">Before product, several years in HR and recruitment, with a background in employment law. It helps me quickly grasp business pain points and prioritise a backlog with users rather than for them.</p>
-    <p class="tip">tip — crédit − débit = balance 🧮</p>
+    <p class="tip fr">activité préférée — lire mon backlog · je prompte &amp; je Claude 🤖</p>
+    <p class="tip en">favourite activity — reading my backlog · I prompt &amp; I Claude 🤖</p>
   </section>
 
   <section class="current" id="projet">
-    <div class="section-head"><h2><span class="fr">Projet en cours</span><span class="en">Current project</span></h2></div>
+    <div class="section-head"><h2><span class="fr">Projet en cours</span><span class="en">Current project</span></h2><span class="count"><span class="fr">depuis juil. 2026</span><span class="en">since Jul 2026</span></span></div>
     <div class="project">
       <h3>Deutsch Lernen <span class="badge"><span class="fr">Sur invitation</span><span class="en">By invitation</span></span></h3>
-      <p class="fr">Une application web pour apprendre l'allemand, que je conçois et développe moi-même : des leçons et des exercices pour progresser pas à pas.</p>
-      <p class="en">A web app for learning German that I design and build myself: lessons and exercises to make progress step by step.</p>
+      <p class="fr">Un site web d'apprentissage de l'allemand, né d'un constat : Duolingo et les livres de cours atteignent vite leurs limites, entre règles mal expliquées et manque d'exercices.</p>
+      <p class="en">A German-learning website born from a simple observation: Duolingo and coursebooks quickly hit their limits, with poorly explained rules or too few exercises.</p>
+      <p class="fr"><strong>Objectif :</strong> créer en deux mois, from scratch, avec les outils d'IA et mes compétences Product, un outil vraiment utile au quotidien pour comprendre les règles de la langue et pratiquer à volonté, selon son niveau et son envie, de façon ludique.</p>
+      <p class="en"><strong>Goal:</strong> build from scratch in two months, using AI tools and my Product skills, a tool that is genuinely useful day to day to understand the rules of the language and practise at will, by level and interest, in a playful way.</p>
       <p class="fr">Elle est en test privé, disponible <strong>sur invitation</strong>. N'hésitez pas à me contacter pour l'essayer, ou simplement pour échanger.</p>
       <p class="en">It's in private testing and available <strong>by invitation</strong>. Feel free to get in touch to try it, or simply to chat.</p>
+      <div class="tags"><span>Claude Code</span><span>Claude Cowork</span><span>GitHub Desktop</span><span>Firebase</span></div>
       <div class="links">
         <a class="link-btn primary js-mail" href="mailto:adrien.schaffner.pro@gmail.com"
            data-subject-fr="Demande d'accès à Deutsch Lernen"
@@ -411,8 +415,12 @@
       <span class="skill">Figma</span>
       <span class="skill">Notion</span>
       <span class="skill">Product Board</span>
+      <span class="skill">Claude Code</span>
+      <span class="skill">Claude Cowork</span>
+      <span class="skill">Firebase</span>
       <span class="skill">Ruby on Rails</span>
       <span class="skill">HTML / CSS / JavaScript</span>
+      <span class="skill fr">Applications web</span><span class="skill en">Web applications</span>
       <span class="skill fr">QA produit</span><span class="skill en">Product QA</span>
       <span class="skill fr">Empathie et curiosité</span><span class="skill en">Empathy &amp; curiosity</span>
       <span class="skill fr">Leadership collaboratif</span><span class="skill en">Collaborative leadership</span>
@@ -450,25 +458,25 @@
       </div>
 
       <div class="row">
-        <div class="period">2022 — 2023</div>
+        <div class="period"><span class="fr">Avr. 2022 —<br>Mars 2023</span><span class="en">Apr 2022 —<br>Mar 2023</span></div>
         <div>
-          <div class="role-title"><span class="fr">Projets produit en équipe</span><span class="en">Team product projects</span></div>
-          <div class="org"><span class="fr">Après Le Wagon · Crushs et Jolya</span><span class="en">After Le Wagon · Crushs and Jolya</span></div>
-          <p class="desc fr">À la suite du bootcamp, mise en pratique du travail en équipe sur deux projets produit, en attendant de trouver un poste permanent.</p>
-          <p class="desc en">After the bootcamp, I put teamwork into practice on two product projects while looking for a permanent role.</p>
+          <div class="role-title"><span class="fr">Reconversion vers le Product</span><span class="en">Career change into Product</span></div>
+          <div class="org"><span class="fr">Le Wagon · projets Crushs et Jolya</span><span class="en">Le Wagon · Crushs and Jolya projects</span></div>
+          <p class="desc fr">Après le bootcamp, mise en pratique du travail en équipe sur deux projets produit, en attendant de trouver un poste permanent, pour découvrir, échouer, apprendre et maîtriser les outils du métier.</p>
+          <p class="desc en">After the bootcamp, I put teamwork into practice on two product projects while looking for a permanent role, to discover, fail, learn and master the tools of the job.</p>
           <ul class="fr">
             <li><strong>Crushs</strong> (juil. – déc. 2022), Product Manager : étude de marché, entretiens utilisateurs, MVP et Scrum avec une équipe de quatre.</li>
-            <li><strong>Jolya</strong> (depuis janv. 2023), Product Manager et co-fondateur : vision, roadmap, user stories, MVP du design system Figma jusqu'au web.</li>
+            <li><strong>Jolya</strong> (début 2023), Product Manager et co-fondateur : vision, roadmap, user stories, MVP du design system Figma jusqu'au web.</li>
           </ul>
           <ul class="en">
             <li><strong>Crushs</strong> (Jul – Dec 2022), Product Manager: market study, user interviews, MVP and Scrum with a team of four.</li>
-            <li><strong>Jolya</strong> (since Jan 2023), Product Manager and co-founder: vision, roadmap, user stories, MVP from Figma design system to web.</li>
+            <li><strong>Jolya</strong> (early 2023), Product Manager and co-founder: vision, roadmap, user stories, MVP from Figma design system to web.</li>
           </ul>
         </div>
       </div>
 
       <div class="row">
-        <div class="period"><span class="fr">Oct. 2019 —<br>Juin 2021</span><span class="en">Oct 2019 —<br>Jun 2021</span></div>
+        <div class="period"><span class="fr">Sept. 2019 —<br>Juil. 2021</span><span class="en">Sep 2019 —<br>Jul 2021</span></div>
         <div>
           <div class="role-title">Account Developer</div>
           <div class="org">QAPA</div>
@@ -478,7 +486,7 @@
       </div>
 
       <div class="row">
-        <div class="period"><span class="fr">Mars 2017 —<br>Mai 2019</span><span class="en">Mar 2017 —<br>May 2019</span></div>
+        <div class="period"><span class="fr">Mars 2017 —<br>Juin 2019</span><span class="en">Mar 2017 —<br>Jun 2019</span></div>
         <div>
           <div class="role-title"><span class="fr">Chargé de recrutement</span><span class="en">Recruitment consultant</span></div>
           <div class="org">Kelly Services France</div>
@@ -519,6 +527,7 @@
         <div class="side-label"><span class="fr">Langues</span><span class="en">Languages</span></div>
         <div class="lang-item"><span class="fr">Français</span><span class="en">French</span><span class="level fr">Langue natale</span><span class="level en">Native</span></div>
         <div class="lang-item"><span class="fr">Anglais</span><span class="en">English</span><span class="level fr">Professionnel</span><span class="level en">Professional</span></div>
+        <div class="lang-item"><span class="fr">Allemand</span><span class="en">German</span><span class="level fr">Professionnel limité</span><span class="level en">Limited professional</span></div>
         <div class="interests">
           <div class="side-label"><span class="fr">Centres d'intérêt</span><span class="en">Interests</span></div>
           <p class="fr">Cinéma, musique, art, structurer des histoires, étudier le manifeste Agile, tester de nouvelles choses.</p>
