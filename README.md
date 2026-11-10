@@ -57,11 +57,10 @@ Led team rituals (daily, weekly, monthly) while working closely with developers 
 ## 🛠️ Skills
 
 | Product | Design & Tech | AI tools |
-|---|---|
-| Backlog management · Agile · Scrum · Kanban | UX / UI · Figma · Notion |
-| Story mapping · Discovery | Ruby on Rails · HTML / CSS / JS |
-| Test plans · Regression testing | Claude Code · Firebase |
-| Claude & Claude Code · Gemini |
+|---|---|---|
+| Backlog management · Agile · Scrum · Kanban | UX / UI · Figma · Notion | Claude & Claude Code |
+| Story mapping · Discovery | Ruby on Rails · HTML / CSS / JS | Gemini |
+| Test plans · Regression testing | Firebase | |
 
 **Strengths:** empathy and curiosity, collaborative leadership, analytical and synthesis skills.
 
