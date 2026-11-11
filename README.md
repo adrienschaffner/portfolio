@@ -27,7 +27,7 @@ Mostly used as a project to learn how to manage Claude Code and add AI skills to
 
 ## 💼 Previous experience
 
-### Product Owner · TechWise SAS — Keeper · *June 2023 — March 2026*
+### Product Owner · TechWise — Keeper · *June 2023 — March 2026*
 Keeper is a real-time accounting review tool. I owned its cross-functional scope: user journey, anomalies, documents and integrations.
 We also Built the **FEC validation tool** from scratch in one year
 Key responsibilities (among other things):
