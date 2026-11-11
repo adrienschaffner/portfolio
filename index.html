@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adrien Schaffner – Product Owner</title>
+<meta name="description" content="Adrien Schaffner, Product Owner based in Cologne. Experience, skills and contact.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1b'/%3E%3Cg stroke='%23f3f2ef' stroke-width='3.5' stroke-linecap='round'%3E%3Cpath d='M32 12v40M51 26 13 38M44 48 20 16M20 48 44 16M13 26l38 12'/%3E%3C/g%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f3f2ef;font-family:'Inter Tight',Helvetica,Arial,sans-serif;color:#1d1d1b}
+a{color:inherit;text-decoration:none}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;padding:clamp(20px,3vw,32px) clamp(20px,4vw,48px)}
+nav{display:flex;align-items:center;gap:clamp(20px,3vw,36px);font-size:14px;position:relative;z-index:3}
+.links{display:flex;gap:clamp(20px,3vw,36px);color:#3a3a37}
+.links a:hover{color:#1d1d1b}
+.right{margin-left:auto;display:flex;gap:22px;align-items:center}
+
+.cta{text-decoration:underline;text-underline-offset:4px}
+.burger{display:none;background:none;border:0;font:inherit;font-size:14px;cursor:pointer;color:#1d1d1b}
+.body{flex:1;display:flex;gap:clamp(16px,3vw,40px);padding-top:clamp(40px,8vh,90px)}
+.side{display:flex;flex-direction:column;align-items:center;gap:18px;font-size:13px;color:#a3a29c}
+.side .v{writing-mode:vertical-rl;transform:rotate(180deg)}
+.side .line{flex:1;width:1px;background:#cfcec8}
+.main{flex:1;display:flex;flex-direction:column;min-width:0}
+.stats{display:flex;flex-wrap:wrap;gap:clamp(28px,5vw,60px);padding-left:clamp(0px,1vw,14px)}
+.n{font-size:clamp(34px,4.5vw,48px);font-weight:300;line-height:1;letter-spacing:-1px}
+.n sup{font-size:.45em;vertical-align:top;position:relative;top:.15em;margin-right:2px}
+.l{font-size:13px;color:#5c5b57;margin-top:10px}
+.hello{margin-top:clamp(32px,7vh,80px)}
+.hello h1{font-size:clamp(84px,17vw,200px);font-weight:300;letter-spacing:-.05em;line-height:.95}
+.hello p{font-size:clamp(17px,2vw,20px);margin:16px 0 0 clamp(4px,1vw,14px)}
+.hello small{display:block;font-size:14px;line-height:1.5;color:#5c5b57;margin:8px 0 0 clamp(4px,1vw,14px);max-width:34ch}
+.scroll{margin-top:auto;padding:40px 0 8px clamp(4px,1vw,14px);font-size:15px}
+@media (max-width:720px){
+  .links{display:none;position:absolute;top:calc(100% + 14px);left:0;right:0;flex-direction:column;gap:16px;background:#f3f2ef;padding:18px 0;border-top:1px solid #dddcd6;border-bottom:1px solid #dddcd6;font-size:16px}
+  .links.open{display:flex}
+  .burger{display:block}
+  .right{gap:16px}
+  .side{display:none}
+  .body{padding-top:48px}
+}
+.body{position:relative}
+.visual{position:absolute;top:0;right:calc(-1*clamp(20px,4vw,48px));bottom:calc(-1*clamp(20px,3vw,32px));width:min(44%,560px);z-index:0}
+.visual img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.main{position:relative;z-index:1}
+@media (max-width:720px){
+  .visual{position:relative;right:auto;bottom:auto;width:auto;height:46vh;margin:32px calc(-1*clamp(20px,4vw,48px)) calc(-1*clamp(20px,3vw,32px))}
+  .body{flex-direction:column}
+}
+html{scroll-behavior:smooth}
+section,footer{padding:clamp(56px,9vw,110px) clamp(20px,6vw,90px)}
+h2{font-weight:300;letter-spacing:-.03em;line-height:1.05}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,100px)}
+.about h2{font-size:clamp(40px,5vw,64px)}
+.about-left p{margin-top:24px;font-size:clamp(16px,1.4vw,19px);line-height:1.65;color:#6b6a65;max-width:36ch}
+.about-right{display:flex;flex-direction:column;gap:36px;padding-top:clamp(0px,4vw,60px)}
+.point{display:flex;gap:18px;align-items:flex-start}
+.star{flex:none;width:44px;height:44px;border-radius:50%;background:#1d1d1b;color:#f3f2ef;display:flex;align-items:center;justify-content:center;font-size:18px}
+.point p{font-size:clamp(16px,1.4vw,19px);line-height:1.65;color:#6b6a65;padding-top:6px}
+.exp{background:#fbfbfa}
+.exp-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:clamp(40px,6vw,80px)}
+.tag-dot{display:inline-flex;align-items:center;gap:10px;font-size:17px}
+.tag-dot:before{content:"";width:12px;height:12px;border-radius:50%;background:#1d1d1b}
+.exp h2{font-size:clamp(38px,5vw,64px);margin-top:18px;max-width:12ch}
+.exp-intro p{font-size:clamp(16px,1.4vw,19px);line-height:1.65;color:#6b6a65}
+.exp-intro .cta{display:inline-block;margin-top:24px}
+
+.row h3{font-size:clamp(21px,2.2vw,30px);font-weight:400;letter-spacing:-.02em}
+.date{display:block;margin-top:10px;color:#6b6a65;font-size:16px;padding-left:22px;position:relative}
+.date:before{content:"•";position:absolute;left:4px}
+.row p{color:#6b6a65;font-size:16px;line-height:1.65;max-width:40ch}
+.pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+.pills span{padding:9px 18px;border-radius:999px;border:1px solid #dddcd6;background:#eeeeeb;font-size:15px;white-space:nowrap}
+.pills span.dark{background:#1d1d1b;color:#f3f2ef;border-color:#1d1d1b}
+.vision{background:#eeedeb;text-align:center}
+.vision h2{font-size:clamp(32px,4.4vw,58px);letter-spacing:-.04em}
+.vision p{margin:18px auto 0;max-width:52ch;font-size:clamp(16px,1.4vw,19px);line-height:1.65;color:#6b6a65}
+.vision .cta{display:inline-block;margin-top:48px;font-size:18px}
+footer{background:#222221;color:#f3f2ef;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 28px;align-items:center;font-size:17px}
+.foot-links a.active{background:#2e2e2c;padding:12px 26px;border-radius:999px}
+.mail{font-size:clamp(24px,3.6vw,52px);font-weight:300;letter-spacing:-.03em;overflow-wrap:anywhere}
+@media (max-width:860px){
+  .about,.exp-head{grid-template-columns:1fr}
+  .pills{justify-content:flex-start}
+  .about-right{padding-top:0}
+}
+.skills h2{font-size:clamp(38px,5vw,64px);margin:18px 0 clamp(36px,5vw,64px);max-width:16ch}
+.cards{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,calc((100% - 48px)/3.3));gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;margin-right:calc(-1*clamp(20px,6vw,90px));padding-right:clamp(20px,6vw,90px);scrollbar-width:thin}
+.card{scroll-snap-align:start;min-height:300px;padding:28px 26px;display:flex;flex-direction:column}
+.card.c0{background:#edf3fa}.card.c1{background:#cfe0ef}.card.c2{background:#f1f1f0}
+.ico{width:44px;height:44px;fill:none;stroke:#1d1d1b;stroke-width:1}
+.card h3{margin-top:auto;padding-top:60px;font-size:22px;font-weight:400;letter-spacing:-.01em}
+.card p{margin-top:12px;font-size:15px;line-height:1.65;color:#6b6a65}
+.social{display:flex;gap:12px;margin-top:28px}
+.social a{width:44px;height:44px;border-radius:50%;border:1px solid #1d1d1b;display:flex;align-items:center;justify-content:center;font-size:17px;transition:background .2s,color .2s}
+.social a:hover{background:#1d1d1b;color:#f3f2ef}
+.row{border-bottom:1px solid #e6e5e0}
+.row summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1.1fr 1fr auto 40px;gap:32px;align-items:center;padding:clamp(26px,3vw,40px) 0}
+.row summary::-webkit-details-marker{display:none}
+.toggle{width:40px;height:40px;border-radius:50%;border:1px solid #cfcec8;position:relative;transition:transform .25s,background .2s}
+.toggle:before,.toggle:after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:#1d1d1b;transform:translate(-50%,-50%)}
+.toggle:after{transform:translate(-50%,-50%) rotate(90deg);transition:opacity .2s}
+.row[open] .toggle{background:#1d1d1b}
+.row[open] .toggle:before{background:#f3f2ef}.row[open] .toggle:after{opacity:0}
+.row summary:hover .toggle{border-color:#1d1d1b}
+.row summary:focus-visible{outline:2px solid #1d1d1b;outline-offset:4px}
+.more{padding:0 0 clamp(26px,3vw,40px);max-width:70ch}
+.more p{max-width:70ch;color:#6b6a65;font-size:16px;line-height:1.7;margin-bottom:14px}
+@media (max-width:860px){.row summary{grid-template-columns:1fr 40px;gap:14px}.row summary>div:first-child{grid-column:1}.row summary>.toggle{grid-column:2;grid-row:1}.row summary>p,.row summary>.pills{grid-column:1/-1}}
+.more h4{font-size:17px;font-weight:400;margin:22px 0 12px;color:#1d1d1b}
+.more h4:first-child{margin-top:0}
+.more ul{padding-left:20px;margin-bottom:14px}
+.more li{color:#6b6a65;font-size:16px;line-height:1.7;margin-bottom:6px;max-width:70ch}
+.more strong{font-weight:400;color:#1d1d1b}
+</style>
+</head>
+<body>
+<header class="hero">
+  <nav>
+    <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <div class="links" id="menu">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a>
+    </div>
+    <div class="right">
+      
+      <a class="cta" href="mailto:adrien.schaffner.pro@gmail.com">Get in touch ↗</a>
+    </div>
+  </nav>
+  <div class="body">
+    <div class="side" aria-hidden="true"><span class="v">Product Owner</span><span class="line"></span><span class="v">2026</span></div>
+    <div class="main">
+      <div class="stats">
+        <div><div class="n"><sup>+</sup>3 yrs</div><div class="l">Product Owner on Keeper</div></div>
+      </div>
+      <div class="hello">
+        <h1>Welcome</h1>
+        <p>— I'm Adrien, Product Owner</p>
+        <small>Former Sales &amp; HR specialist. Based in Cologne.</small>
+      </div>
+      <a class="scroll" href="#about">Scroll down ↓</a>
+    </div>
+    <figure class="visual"><img src="hero-stairs.jpg" alt="Curved staircase in black and white"></figure>
+  </div>
+</header>
+<section class="about" id="about">
+  <div class="about-left">
+    <h2>About me</h2>
+    <p>I'm a Product Owner who turns real user pain points into clear, prioritised backlogs. For almost three years, I ran the Keeper backlog at TechWise, from discovering the need to measuring success in production. Based in Cologne, I'm now looking for my next Product role.</p>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/adrien-schaffner/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><span>in</span></a>
+      <a href="https://medium.com/@adrien.schaffner" target="_blank" rel="noopener" aria-label="Medium articles"><span>M</span></a>
+    </div>
+  </div>
+  <div class="about-right">
+    <div class="point"><span class="star" aria-hidden="true">✦</span><p>4 years in Product Management. At TechWise, I contributed to the development and launch of Keeper, a web tool for quality control of accounting files intended for accounting firms. I also participated in building the FEC validation tool from scratch in one year. On my own, I built Deutsch Lernen with AI tools: MVP in one month, V2 and testing in three with users.</p></div>
+    <div class="point"><span class="star" aria-hidden="true">✦</span><p>Before joining Product, several years in Sales Management &amp; HR after graduating from law school. That background helps me grasp business &amp; users' pain points fast and prioritise roadmap decisions about what to build.</p></div>
+    <div class="point"><span class="star" aria-hidden="true">✦</span><p>Curious and empathetic, I lead collaboratively and love to reach effective outcomes based on the product vision and user needs.</p></div>
+  </div>
+</section>
+
+<section class="exp" id="experience">
+  <div class="exp-head">
+    <div>
+      <span class="tag-dot">Experience</span>
+      <h2>Explore my product journey</h2>
+    </div>
+    <div class="exp-intro">
+      <p>Over the past 4 years, I've moved into product, learning to turn user needs into features that ship and get used.</p>
+      <a class="cta" href="mailto:adrien.schaffner.pro@gmail.com">Get in touch ↗</a>
+    </div>
+  </div>
+
+  <details class="row">
+    <summary>
+    <div><h3>Deutsch Lernen, Cologne</h3><span class="date">July 2026 – Present</span></div>
+    <p>Side project, Product Owner and builder. A German-learning web app built from scratch with AI tools.</p>
+    <div class="pills"><span class="dark">Claude Code</span><span class="dark">MVP</span></div>
+    <span class="toggle" aria-hidden="true"></span>
+    </summary>
+    <div class="more">
+<ul>
+<li>German-language learning tool based on a general observation that the tools available fall short, and on my wish to develop a tool with AI in a limited time.</li>
+<li>One month of discovery: gathering needs, doing market research and analysing a relevant solution. Then planning an MVP testable in 1 month.</li>
+<li>Combination of Notion for creating tickets and organising the roadmap, Figma for the initial prototyping and Claude Code for the technical build and help with brainstorming.</li>
+<li>Cost control: token usage, writing reusable prompts and skills, task automation.</li>
+<li>Solving problems related to data security and to the hallucinations specific to AI, not forgetting its tendency to act outside of any specific request.</li>
+<li>Result: a functional tool giving access to grammar points, and to work on vocabulary or the conjugation of specific verbs according to one's level and needs. 5 full-time users as beta testers.</li>
+</ul>
+    </div>
+  </details>
+  <details class="row">
+    <summary>
+    <div><h3>TechWise · Keeper</h3><span class="date">June 2023 – March 2026</span></div>
+    <p>Software for controlling and reviewing the quality of accounting records &amp; FEC validation tool built from scratch.</p>
+    <div class="pills"><span>Backlog</span><span>Discovery</span><span>QA</span><span>Scrum</span></div>
+    <span class="toggle" aria-hidden="true"></span>
+    </summary>
+    <div class="more">
+<p>Participation in the development of Keeper, the real-time accounting review tool.</p>
+<h4>Main missions</h4>
+<ul>
+<li>In charge of the cross-cutting part of the platform (user journey, anomaly management, document management, integration)</li>
+<li>Management of the product backlog shared with three other products (preparation of cycles and sprints, prioritisation according to user needs and the technical complexity of the topic)</li>
+<li>Creation of tickets and follow-up of their progress until deployment to production, and measurement of success</li>
+<li>Continuous improvement of topics</li>
+<li>Management of meetings (daily, weekly, monthly), ad hoc exchanges with squad leads or developers as well as with users (individually or in groups)</li>
+<li>Creation of mockups (Figma)</li>
+<li>QA: testing product quality in pre-production and production</li>
+</ul>
+<h4>Part 1</h4>
+<ul>
+<li>Initially hired to work on the public launch of Keeper after a testing period, on the cross-cutting part of the tool, within a team of 3 product people and 12 developers</li>
+<li>Stated goal: be ready for e-invoicing</li>
+<li>Continuous improvements of the tool to make it easier to use (smoother controls, reorganisation of the different pages, focus on UI and UX to improve Acquisition and Activation)</li>
+<li>Management of Scrum rituals (daily, weekly, monthly, sprint and cycle reviews, etc.)</li>
+<li>Organisation of the product backlog into Epics, each issue linked to one</li>
+<li>Bug management</li>
+<li>Communication with the squad leads and engineers in charge of building the tool</li>
+<li>Writing tickets and precise user stories with mockups, starting from a problem to solve through to the success criteria and final validation with users</li>
+<li>Implementation of an agile strategy: weekly adjustment of the roadmap according to priorities</li>
+<li>In charge of non-regression testing (NRT) and documentation, wearing the QA hat before release to production</li>
+</ul>
+<h4>Part 2</h4>
+<ul>
+<li>Creation of a new tool to validate the compliance of the FEC (Fichier des écritures comptables)</li>
+<li>Based on the data and controls already existing in Keeper, setting up another tool for chartered accountants, used at the closing of each financial year to save their clients from a tax audit</li>
+<li>Reorganisation of the roadmap and creation of 2 teams: one for Keeper, one for FEC control</li>
+<li>Continuous improvements following user feedback, so as not to block their filing with the tax authorities</li>
+<li>Continuous growth in the number of users (+100) after the first 6 months</li>
+<li>In charge of NRT</li>
+</ul>
+<p><strong>Tools:</strong> Notion, Figma, Insomnia, Product Board, Teams</p>
+    </div>
+  </details>
+  <details class="row">
+    <summary>
+    <div><h3>Le Wagon · Bootcamp</h3><span class="date">April 2022 – March 2023</span></div>
+    <p>Completed a 10-week Web Development Bootcamp, followed by two team side projects for 6 months that helped me land an opportunity as a Product Owner.</p>
+    <div class="pills"><span>Scrum</span><span>MVP</span></div>
+    <span class="toggle" aria-hidden="true"></span>
+    </summary>
+    <div class="more">
+<p>10-week course that taught me the basics of web development in Ruby and Ruby on Rails.</p>
+<p>After the course, organisation of 2 projects with 2 teams of 3 developers, to learn to work together beyond the course.</p>
+<ul>
+<li><strong>Project 1: Crushs.</strong> A dating app based on icebreakers rather than general introductions (10 questions to answer with a limited number of answers; the more affinities in the answers, the more the profiles are highlighted). Stayed at the MVP stage (validated), as the team didn't hold together.</li>
+<li><strong>Project 2: Jolya.</strong> Online clothing rental e-commerce platform. Ambitious goal, limited by the cost required. 2 devs.</li>
+</ul>
+<h4>What I took away</h4>
+<ul>
+<li>It helped me improve my technical communication with experienced developers, be more precise in my requests and start working with key tools</li>
+<li>User interviews applying the Mom Test technique</li>
+<li>It taught me to write tickets from A to Z and to use Figma</li>
+<li>The need to be rigorous in testing and in writing success criteria, to align the vision with the team</li>
+<li>The need to know how to tell a story, a user story, based on a real need. If it isn't possible to explain the need, then the ticket is unlikely to lead to a visible result</li>
+<li>Use of Trello for creating tickets</li>
+<li>Slack for communication</li>
+</ul>
+    </div>
+  </details>
+  <details class="row">
+    <summary>
+    <div><h3>QAPA</h3><span class="date">September 2019 – July 2021</span></div>
+    <p>Account Developer. Managing the requirements of 57 active clients, including Carrefour and Danone, for their HR and recruitment needs, delivering weekly reporting and proactive support.</p>
+    <div class="pills"><span>Key accounts</span><span>Reporting</span><span>Sales</span><span>Communication</span></div>
+    <span class="toggle" aria-hidden="true"></span>
+    </summary>
+    <div class="more">
+<p>As an Account Developer, I was in charge of following up and developing the client portfolio, for both large and mid-sized accounts for whom staffing needs are a priority to ensure business continuity. My team and I were responsible for finding and validating the most relevant candidate(s) for each request, relying both on our know-how as recruiters and on the Qapa technology.</p>
+<p>I arrived when the Bordeaux office opened. The goal, which we achieved, was to scale up within the following year.</p>
+<p>In more detail, my missions were:</p>
+<h4>Business development of the client portfolio</h4>
+<ul>
+<li>Expand the client portfolio, split into key accounts (Carrefour, Danone, Mondial Relay…) and one-off accounts: up to 57 active clients</li>
+<li>In-person demonstrations of the Qapa tool</li>
+<li>Gather the company's staffing needs with the various HR contacts and make sure they are properly understood</li>
+<li>Draw up job descriptions</li>
+<li>Ensure responsiveness, quality and the sending of profiles on high-volume recruitment for hard-to-fill roles</li>
+<li>Increase the number of placed employees and ensure their integration</li>
+<li>Validate their employment contracts</li>
+<li>Answer clients' and colleagues' legal questions on employment law</li>
+<li>Validation of administrative tasks (employment contracts, timesheets, payroll, training contracts…) and weekly activity reporting (KPI)</li>
+<li>Setting up KPIs and weekly meetings to align objectives with the reality on the ground</li>
+</ul>
+<h4>Management of recruitment officers</h4>
+<ul>
+<li>Train the two to four recruitment officers on client specifics and particularities, so they can acquire the keys of the job (individual interviews, performance indicators)</li>
+<li>Train the recruitment teams on phone calls</li>
+<li>Ensure the quality of the work: CV analysis, relevance, interviews, reports…</li>
+<li>Answer their questions (technical, legal…)</li>
+</ul>
+<h4>What I took away</h4>
+<p>The wish to move to the team in charge of building the tool rather than staying in the one that sells it. Being as close as possible to users, I was aware of their problems and frustrated not to be able to take an active part, with the tech teams, in solving them.</p>
+    </div>
+  </details>
+  <details class="row">
+    <summary>
+    <div><h3>Kelly Services France</h3><span class="date">March 2017 – June 2019</span></div>
+    <p>Recruitment consultant for technical roles in industry and energy.</p>
+    <div class="pills"><span>Recruitment</span></div>
+    <span class="toggle" aria-hidden="true"></span>
+    </summary>
+    <div class="more">
+<ul>
+<li>Recruitment officer for technical and industrial jobs</li>
+<li>Main client: Getrag Ford Transmission</li>
+<li>Gathering client needs, regular exchanges and in-depth discussions to understand the position sought and improve the search</li>
+<li>Sourcing, posting job ads</li>
+<li>Management of interviews, from the phone call to the in-person meeting, then highlighting the quality of the profiles to clients</li>
+<li>Drafting of employment contracts</li>
+<li>KPI</li>
+</ul>
+    </div>
+  </details>
+</section>
+
+<section class="skills" id="skills">
+  <span class="tag-dot">Skills</span>
+  <h2>What I bring to a product team</h2>
+  <div class="cards">
+    <article class="card c0"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true"><path d="M22.0 2.0L22.0 42.0M10.2 5.8L33.8 38.2M3.0 15.8L41.0 28.2M3.0 28.2L41.0 15.8M10.2 38.2L33.8 5.8"/></svg><h3>Results-driven</h3><p>I follow every ticket through to production, then measure whether it actually solved the problem.</p></article>
+    <article class="card c1"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true"><path d="M22.0 2.0L22.0 42.0M7.9 7.9L36.1 36.1M2.0 22.0L42.0 22.0M7.9 36.1L36.1 7.9"/></svg><h3>Challenge</h3><p>I question needs and priorities with stakeholders, users and developers, so a shared backlog stays focused on value.</p></article>
+    <article class="card c2"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true"><path d="M22.0 2.0L22.0 42.0M4.7 12.0L39.3 32.0M4.7 32.0L39.3 12.0"/></svg><h3>Curiosity</h3><p>From HR to Product Management and AI tools today: I keep learning and testing new things as a daily mindset.</p></article>
+    <article class="card c0"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true"><path d="M22.0 2.0L22.0 42.0M2.0 22.0L42.0 22.0"/></svg><h3>Empathy</h3><p>Years in HR and product taught me to listen first. I prioritise features alongside users, focused on their actual needs.</p></article>
+    <article class="card c1"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true"><path d="M22.0 2.0L22.0 42.0"/></svg><h3>Collaborative leadership</h3><p>Daily, weekly and monthly Scrum rituals with developers, teammates and users as the key to strong collaboration and communication.</p></article>
+  </div>
+</section>
+
+<section class="vision">
+  <h2>Got a vision? Let's bring it to life!</h2>
+  <p>I'm always excited to collaborate on new and innovative projects. Whether you're starting from scratch or refining an existing idea, I'd be happy to discuss it and join your team.</p>
+  <a class="cta" href="mailto:adrien.schaffner.pro@gmail.com">Book a call ↗</a>
+</section>
+
+<footer>
+  <nav class="foot-links"><a href="#" class="active">Home</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a></nav>
+  <a class="mail" href="mailto:adrien.schaffner.pro@gmail.com">adrien.schaffner.pro@gmail.com</a>
+</footer>
+
+<script>
+const b=document.querySelector('.burger'),m=document.getElementById('menu');
+b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'Close':'Menu';});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false);b.textContent='Menu';}));
+</script>
+</body>
+</html>
